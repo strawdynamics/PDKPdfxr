@@ -1,0 +1,89 @@
+{
+	"amp_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.62059938907623,
+		"delay_fade":0.142459243536,
+		"delay_start":0.11692753434181,
+		"depth":0.24082146584988,
+		"enabled":true,
+		"phase":0,
+		"rate":3.24644947052,
+		"start_phase":0.04485759139061,
+		"type":5
+	},
+	"attack":0.074626870453358,
+	"curvature":0.00074243545532227,
+	"decay":0.13475924730301,
+	"duration":0.067597180604935,
+	"freq_mod": {
+		"arpeggio": [
+			13.039901733398,
+			2.4513392448425,
+			5.5516271591187,
+			6.0375719070435,
+			1.2315049171448
+		],
+		"arpeggio_enabled":false,
+		"center":0.73134529590607,
+		"delay_fade":0.32541236281395,
+		"delay_start":0.10656812041998,
+		"depth":0.65695762634277,
+		"enabled":true,
+		"phase":0,
+		"rate":0.10000000149012,
+		"start_phase":0.17155420780182,
+		"type":6
+	},
+	"lock_note_to_integer":false,
+	"name":"SWHISTLE",
+	"note":55.362655639648,
+	"parameter1_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.5,
+		"delay_fade":0,
+		"delay_start":0,
+		"depth":0.5,
+		"enabled":false,
+		"phase":0,
+		"rate":5,
+		"start_phase":0,
+		"type":1
+	},
+	"parameter2_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.5,
+		"delay_fade":0,
+		"delay_start":0,
+		"depth":0.5,
+		"enabled":false,
+		"phase":0,
+		"rate":5,
+		"start_phase":0,
+		"type":1
+	},
+	"release":0.4388572871685,
+	"sustain":0.78608399629593,
+	"volume":0.96369618177414,
+	"wave":6
+}

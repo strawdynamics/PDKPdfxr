@@ -1,0 +1,89 @@
+{
+	"amp_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.43015494942665,
+		"delay_fade":0,
+		"delay_start":0.082687512040138,
+		"depth":0.24208800494671,
+		"enabled":true,
+		"phase":0,
+		"rate":3.9359474182129,
+		"start_phase":0.77803671360016,
+		"type":3
+	},
+	"attack":0.15288147330284,
+	"curvature":0.28455150127411,
+	"decay":0.10012631118298,
+	"duration":0.13358673453331,
+	"freq_mod": {
+		"arpeggio": [
+			2.6785583496094,
+			8.0255699157715,
+			2.205219745636,
+			4.5457439422607,
+			0.26167929172516
+		],
+		"arpeggio_enabled":false,
+		"center":0.56620985269547,
+		"delay_fade":0.32729390263557,
+		"delay_start":0.13804993033409,
+		"depth":0.58085471391678,
+		"enabled":false,
+		"phase":0,
+		"rate":6.4617552757263,
+		"start_phase":0,
+		"type":2
+	},
+	"lock_note_to_integer":false,
+	"name":"VIBTEST",
+	"note":59.882064819336,
+	"parameter1_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.5,
+		"delay_fade":0,
+		"delay_start":0,
+		"depth":0.5,
+		"enabled":false,
+		"phase":0,
+		"rate":5,
+		"start_phase":0,
+		"type":1
+	},
+	"parameter2_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.5,
+		"delay_fade":0,
+		"delay_start":0,
+		"depth":0.5,
+		"enabled":false,
+		"phase":0,
+		"rate":5,
+		"start_phase":0,
+		"type":1
+	},
+	"release":0.32906791567802,
+	"sustain":0.82797902822495,
+	"volume":0.81627088785172,
+	"wave":6
+}

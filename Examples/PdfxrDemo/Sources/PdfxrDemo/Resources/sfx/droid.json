@@ -1,0 +1,89 @@
+{
+	"amp_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.42093658447266,
+		"delay_fade":0,
+		"delay_start":0.067327544093132,
+		"depth":0.37262499332428,
+		"enabled":false,
+		"phase":0,
+		"rate":4.8102593421936,
+		"start_phase":0,
+		"type":6
+	},
+	"attack":0.081964209675789,
+	"curvature":0.19182419776917,
+	"decay":0.11283750832081,
+	"duration":0.57776969671249,
+	"freq_mod": {
+		"arpeggio": [
+			4.2002363204956,
+			3.9269895553589,
+			8.5552425384521,
+			0.37754774093628,
+			10.381129264832
+		],
+		"arpeggio_enabled":true,
+		"center":0.65060722827911,
+		"delay_fade":0.07062391191721,
+		"delay_start":0.10354121774435,
+		"depth":3.3753595352173,
+		"enabled":true,
+		"phase":0,
+		"rate":2.4869024753571,
+		"start_phase":0,
+		"type":3
+	},
+	"lock_note_to_integer":false,
+	"name":"DROID",
+	"note":63.36848449707,
+	"parameter1_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.5,
+		"delay_fade":0,
+		"delay_start":0,
+		"depth":0.5,
+		"enabled":false,
+		"phase":0,
+		"rate":5,
+		"start_phase":0,
+		"type":1
+	},
+	"parameter2_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.5,
+		"delay_fade":0,
+		"delay_start":0,
+		"depth":0.5,
+		"enabled":false,
+		"phase":0,
+		"rate":5,
+		"start_phase":0,
+		"type":1
+	},
+	"release":0.25893247127533,
+	"sustain":0.69674003124237,
+	"volume":0.76898658275604,
+	"wave":2
+}

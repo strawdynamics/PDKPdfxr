@@ -1,0 +1,89 @@
+{
+	"amp_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.60077607631683,
+		"delay_fade":0,
+		"delay_start":0.12871423363686,
+		"depth":1.8927937746048,
+		"enabled":true,
+		"phase":0,
+		"rate":6.2824516296387,
+		"start_phase":0.35413467884064,
+		"type":2
+	},
+	"attack":0.079200841486454,
+	"curvature":0.16405177116394,
+	"decay":0.13259206712246,
+	"duration":0.17415082454681,
+	"freq_mod": {
+		"arpeggio": [
+			15.437492370605,
+			1.0647505521774,
+			3.5296320915222,
+			9.6029167175293,
+			1.6125857830048
+		],
+		"arpeggio_enabled":false,
+		"center":0.38783350586891,
+		"delay_fade":0.23925790190697,
+		"delay_start":0.038810696452856,
+		"depth":1.7899745702744,
+		"enabled":false,
+		"phase":0,
+		"rate":6.9880800247192,
+		"start_phase":0.11685681343079,
+		"type":2
+	},
+	"lock_note_to_integer":false,
+	"name":"raygun",
+	"note":52.376884460449,
+	"parameter1_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.5,
+		"delay_fade":0,
+		"delay_start":0,
+		"depth":0.5,
+		"enabled":false,
+		"phase":0,
+		"rate":5,
+		"start_phase":0,
+		"type":1
+	},
+	"parameter2_mod": {
+		"arpeggio": [
+			0,
+			0,
+			0,
+			0,
+			0
+		],
+		"arpeggio_enabled":false,
+		"center":0.5,
+		"delay_fade":0,
+		"delay_start":0,
+		"depth":0.5,
+		"enabled":false,
+		"phase":0,
+		"rate":5,
+		"start_phase":0,
+		"type":1
+	},
+	"release":0.39475381374359,
+	"sustain":0.76872819662094,
+	"volume":0.93268018960953,
+	"wave":7
+}
