@@ -1,0 +1,24 @@
+{
+  "originHash" : "f47a0f923e28e159dcd493470665be4e28b908dfd94b2c6d3476e4b4cb2a4459",
+  "pins" : [
+    {
+      "identity" : "playdatekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/finnvoor/PlaydateKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "66f07424c5e4346789d9c8b25f5945208e21fa81"
+      }
+    },
+    {
+      "identity" : "utf8viewextensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/strawdynamics/UTF8ViewExtensions.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "babf8b80cff1dba41678ececccd3dc711bb9a975"
+      }
+    }
+  ],
+  "version" : 3
+}

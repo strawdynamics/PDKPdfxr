@@ -17,6 +17,7 @@ let package = Package(
 			name: "PDKPdfxr",
 			dependencies: [
 				.product(name: "PlaydateKit", package: "PlaydateKit"),
+				.product(name: "UTF8ViewExtensions", package: "UTF8ViewExtensions"),
 			],
 			swiftSettings: [
 				.enableExperimentalFeature("Embedded"),

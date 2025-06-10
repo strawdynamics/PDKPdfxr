@@ -13,8 +13,7 @@ let package = Package(
 	platforms: [.macOS(.v14)],
 	products: [.library(name: "PdfxrDemo", type: xcode ? nil : .dynamic, targets: ["PdfxrDemo"])],
 	dependencies: [
-//		.package(url: "https://github.com/finnvoor/PlaydateKit.git", branch: "main"),
-		.package(path: "../../../PlaydateKit"),
+		.package(url: "https://github.com/finnvoor/PlaydateKit.git", branch: "main"),
 		.package(path: "../.."),
 	],
 	targets: [
