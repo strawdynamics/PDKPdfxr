@@ -1,20 +1,27 @@
 import PlaydateKit
 
 public class Pdfxr {
+	// MARK: Lifecycle
+
+	public init(effectPath: String) throws(Pdfxr.Error) {
+		effect = try SoundEffect(effectPath: effectPath)
+	}
+
+	private init(copiedFrom: Pdfxr) {
+		effect = SoundEffect(loadedEffect: copiedFrom.effect)
+	}
+
+	// MARK: Public
+
 	public struct Error: Swift.Error, CustomStringConvertible, @unchecked Sendable {
 		public let description: String
 	}
 
-	let effectPath: String
-
-	public let effect: SoundEffect
-
 	public var synth: Sound.Synth { effect.synth }
 
-	public init(effectPath: String) throws(Pdfxr.Error) {
-		self.effectPath = effectPath
-		effect = try SoundEffect(effectPath: effectPath)
-	}
+	public var volume: Float { effect.volume }
+
+	public var note: MIDINote { effect.note }
 
 	public func play(note: MIDINote? = nil, volume: Float? = nil) {
 		let note = note ?? (effect.lockNoteToInteger ? MIDINote(Int(effect.note)) : effect.note)
@@ -35,4 +42,12 @@ public class Pdfxr {
 	public func stop() {
 		effect.synth.noteOff()
 	}
+
+	public func copy() -> Pdfxr {
+		Pdfxr(copiedFrom: self)
+	}
+
+	// MARK: Internal
+
+	let effect: SoundEffect
 }
