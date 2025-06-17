@@ -2,16 +2,25 @@ import PlaydateKit
 import CPlaydate
 import UTF8ViewExtensions
 
-public class SoundEffect {
-	public let name: String
-	public let note: MIDINote
-	public let volume: Float
-	public let duration: Float
-	public let totalDuration: Float
+class SoundEffect {
+	let name: String
+	let note: MIDINote
+	let volume: Float
+	let duration: Float
+	let totalDuration: Float
 
-	public let wave: SoundWaveform
+	let attack: Float
+	let decay: Float
+	let sustain: Float
+	let release: Float
+	let curvature: Float
 
-	public let lockNoteToInteger: Bool
+	let amplitudeModDef: ModDef?
+	let frequencyModDef: ModDef?
+
+	let wave: SoundWaveform
+
+	let lockNoteToInteger: Bool
 
 	let synth: Sound.Synth
 
@@ -91,6 +100,9 @@ public class SoundEffect {
 		var duration: Float = 0
 		var attack: Float = 0
 		var decay: Float = 0
+		var sustain: Float = 0
+		var release: Float = 0
+		var curvature: Float = 0
 		var wave: SoundWaveform = .sine
 
 		var lockNoteToInteger = false
@@ -99,6 +111,45 @@ public class SoundEffect {
 		var frequencyModDef: ModDef?
 
 		let synth = Sound.Synth()
+	}
+
+	init(loadedEffect: SoundEffect) {
+		// FIXME: loadedEffect.synth.copy() broken?
+		let synth = Sound.Synth()
+
+		synth.setAttackTime(loadedEffect.attack)
+		synth.setDecayTime(loadedEffect.decay)
+		synth.setSustainLevel(loadedEffect.sustain)
+		synth.setReleaseTime(loadedEffect.release)
+		synth.setEnvelopeCurvature(loadedEffect.curvature)
+
+		synth.setWaveform(loadedEffect.wave)
+
+		name = loadedEffect.name
+		note = loadedEffect.note
+		volume = loadedEffect.volume
+		duration = loadedEffect.duration
+		totalDuration = loadedEffect.totalDuration
+		attack = loadedEffect.attack
+		decay = loadedEffect.decay
+		sustain = loadedEffect.sustain
+		release = loadedEffect.release
+		curvature = loadedEffect.curvature
+		wave = loadedEffect.wave
+		lockNoteToInteger = loadedEffect.lockNoteToInteger
+
+		amplitudeModDef = loadedEffect.amplitudeModDef
+		frequencyModDef = loadedEffect.frequencyModDef
+
+		if let ampModDef = amplitudeModDef {
+			synth.setAmplitudeModulator(ampModDef.toLFO())
+		}
+
+		if let freqModDef = frequencyModDef {
+			synth.setFrequencyModulator(freqModDef.toLFO())
+		}
+
+		self.synth = synth
 	}
 
 	init(effectPath: String) throws(Pdfxr.Error) {
@@ -134,14 +185,22 @@ public class SoundEffect {
 		volume = ctx.volume
 		duration = ctx.duration
 		lockNoteToInteger = ctx.lockNoteToInteger
+		attack = ctx.attack
+		decay = ctx.decay
+		sustain = ctx.sustain
+		release = ctx.release
+		curvature = ctx.curvature
 		wave = ctx.wave
 		totalDuration = ctx.duration + ctx.attack + ctx.decay
 
-		if let ampMod = ctx.amplitudeModDef {
+		amplitudeModDef = ctx.amplitudeModDef
+		frequencyModDef = ctx.frequencyModDef
+
+		if let ampMod = amplitudeModDef {
 			ctx.synth.setAmplitudeModulator(ampMod.toLFO())
 		}
 
-		if let freqMod = ctx.frequencyModDef {
+		if let freqMod = frequencyModDef {
 			ctx.synth.setFrequencyModulator(freqMod.toLFO())
 		}
 
@@ -240,10 +299,13 @@ public class SoundEffect {
 				ctx.decay = val.data.floatval
 				ctx.synth.setDecayTime(val.data.floatval)
 			case "sustain":
+				ctx.sustain = val.data.floatval
 				ctx.synth.setSustainLevel(val.data.floatval)
 			case "release":
+				ctx.release = val.data.floatval
 				ctx.synth.setReleaseTime(val.data.floatval)
 			case "curvature":
+				ctx.curvature = val.data.floatval
 				ctx.synth.setEnvelopeCurvature(val.data.floatval)
 			case "wave":
 				let waveform: SoundWaveform
@@ -268,6 +330,7 @@ public class SoundEffect {
 					print("[SoundEffect] Unknown waveform \(val.data.intval)")
 					waveform = .sine
 				}
+				ctx.wave = waveform
 				ctx.synth.setWaveform(waveform)
 			default:
 				break
