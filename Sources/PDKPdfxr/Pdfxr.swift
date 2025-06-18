@@ -23,6 +23,8 @@ public class Pdfxr {
 
 	public var note: MIDINote { effect.note }
 
+	public var name: String { effect.name }
+
 	public func play(note: MIDINote? = nil, volume: Float? = nil) {
 		let note = note ?? (effect.lockNoteToInteger ? MIDINote(Int(effect.note)) : effect.note)
 		let volume = volume ?? effect.volume

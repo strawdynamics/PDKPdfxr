@@ -26,7 +26,7 @@ final class Game: PlaydateGame {
 	func update() -> Bool {
 		Graphics.clear(color: .white)
 
-		Graphics.drawText("⬅️➡️: \(Game.sfx[sfxIndex].effect.name)", at: Point(
+		Graphics.drawText("⬅️➡️: \(Game.sfx[sfxIndex].name)", at: Point(
 			x: 145,
 			y: 100,
 		))
